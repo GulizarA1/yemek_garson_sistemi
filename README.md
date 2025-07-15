@@ -109,7 +109,3 @@ GitHub
 Bu proje MIT Lisansı ile lisanslanmıştır.
 
 ---
-
-Bunu `README.md` olarak yapıştır ve kaydet. Sonrasında GitHub’da da otomatik görünür.
-
-Başka bir konuda yardımcı olayım mı? Mesela PDF rapor ya da video sunum planı?
