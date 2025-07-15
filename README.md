@@ -64,10 +64,12 @@ pip install -r requirements.txt
 
 python main.py
 Tarayıcıdan şu adrese git:
-
-
 http://127.0.0.1:5000
-🧪 Temel Özellikler
+
+
+
+## 🧪 Temel Özellikler
+
 📋 Sipariş takibi ve görselleştirme
 
 👤 Garson tanıma (QR ile)
@@ -80,7 +82,10 @@ http://127.0.0.1:5000
 
 🔄 Masa sıfırlama
 
-🧠 Gelecek Geliştirmeler (Opsiyonel)
+
+
+##🧠 Gelecek Geliştirmeler (Opsiyonel)
+
 Yüz tanıma ile garson tanıma
 
 Mobil arayüz entegrasyonu
@@ -89,7 +94,9 @@ YOLOv8 ile gelişmiş yemek tanıma modeli
 
 E-posta ile günlük rapor gönderimi
 
-🤝 Katkıda Bulunmak
+
+##🤝 Katkıda Bulunmak
+
 Bu repoyu fork'la
 
 Kendi branch'ini oluştur: git checkout -b yenilik
@@ -100,9 +107,10 @@ Push et: git push origin yenilik
 
 Pull Request gönder 🚀
 
-🧑‍🎓 Hazırlayan
+##🧑‍🎓 Hazırlayan
+
 Gülizar A.
-Bilgisayar Mühendisliği & Müzik
+Bilgisayar Mühendisliği 
 GitHub
 
 🏁 Lisans
