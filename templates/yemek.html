@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🍛 Yemek Tanıma - Yemek Garson Sistemi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff7e6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #d35400;
+        }
+        header h1 {
+            font-size: 2.5em;
+        }
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #e67e22;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #b34700;
+        }
+        main {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(214, 137, 40, 0.3);
+            text-align: center;
+        }
+        button {
+            background-color: #e67e22;
+            border: none;
+            color: white;
+            padding: 12px 28px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 25px;
+        }
+        button:hover {
+            background-color: #b34700;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #555;
+        }
+        .camera-feed {
+            margin-top: 30px;
+            border: 3px solid #e67e22;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 640px;
+            height: 480px;
+            background: #f8f1e4;
+            display: inline-block;
+            line-height: 480px;
+            color: #bbb;
+            font-size: 1.5em;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍛 Yemek Tanıma</h1>
+        <nav>
+            <a href="/">🏠 Ana Sayfa</a>
+            <a href="/garson">👤 Garson Tanıma</a>
+            <a href="/siparisler">📋 Siparişler</a>
+            <a href="/rapor">📊 Performans Raporu</a>
+        </nav>
+    </header>
+    <main>
+        <p>Canlı kamera görüntüsünü buradan izleyebilir ve yemek tanıma işlemini başlatabilirsiniz.</p>
+
+        <div class="camera-feed" id="cameraFeed">
+            Kamera görüntüsü burada gösterilecek.
+        </div>
+
+        <button onclick="alert('Kamera açma fonksiyonu buraya entegre edilecek 🎥')">📷 Kamerayı Başlat</button>
+    </main>
+</body>
+</html>

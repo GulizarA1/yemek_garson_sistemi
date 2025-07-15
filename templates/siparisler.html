@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>📋 Sipariş Listesi - Yemek Garson Sistemi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff8e1;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #ffa000;
+        }
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #ffa000;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #c67100;
+        }
+        main {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 160, 0, 0.3);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ffd54f;
+            text-align: center;
+            font-size: 1.05em;
+        }
+        th {
+            background-color: #ffca28;
+            color: #5d4037;
+        }
+        tr:hover {
+            background-color: #fff3e0;
+        }
+        .no-data {
+            text-align: center;
+            font-style: italic;
+            color: #999;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📋 Sipariş Listesi</h1>
+        <nav>
+            <a href="/">🏠 Anasayfa</a>
+            <a href="/garson">👤 Garson Tanıma</a>
+            <a href="/yemek">🍛 Yemek Tanıma</a>
+            <a href="/siparisler">📋 Siparişler</a>
+            <a href="/rapor">📊 Performans Raporu</a>
+        </nav>
+    </header>
+    <main>
+        {% if siparisler %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>🍽️ Masa No</th>
+                        <th>👤 Garson ID</th>
+                        <th>🍲 Ürün</th>
+                        <th>🔢 Miktar</th>
+                        <th>💰 Fiyat (₺)</th>
+                        <th>⏰ Zaman</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for siparis in siparisler %}
+                    <tr>
+                        <td>{{ siparis.masa_no }}</td>
+                        <td>{{ siparis.garson_id }}</td>
+                        <td>{{ siparis.urun }}</td>
+                        <td>{{ siparis.miktar }}</td>
+                        <td>{{ '%.2f'|format(siparis.fiyat) }}</td>
+                        <td>{{ siparis.zaman }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="no-data">🕳️ Henüz hiçbir sipariş kaydı bulunmamaktadır.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Masa Resetleme</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+        }
+        form {
+            background: white;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1.5px solid #ccc;
+            font-size: 1em;
+        }
+        button {
+            width: 100%;
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #b71c1c;
+        }
+        p.note {
+            margin-top: -15px;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        a.back-link {
+            margin-top: 20px;
+            display: inline-block;
+            color: #d32f2f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧹 Masa Resetleme</h1>
+    <form method="POST">
+        <label for="masa_no">Resetlemek istediğiniz masa numarasını girin (tüm masalar için boş bırakabilirsiniz):</label>
+        <input type="number" id="masa_no" name="masa_no" min="1" placeholder="Örnek: 1, 2, 3 veya boş" />
+        <button type="submit">Resetle</button>
+    </form>
+    <a href="{{ url_for('index') }}" class="back-link">⬅️ Ana Sayfaya Dön</a>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🍽️ Yemek Garson Sistemi - Kontrol Paneli</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 2.8em;
+            user-select: none;
+        }
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 1.25em;
+            background: #e8f5e9;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 7px rgba(76,175,80,0.3);
+            transition: all 0.3s ease;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        nav a:hover {
+            background: #4caf50;
+            color: white;
+            box-shadow: 0 5px 15px rgba(76,175,80,0.6);
+        }
+        main {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 35px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 18px rgba(0,0,0,0.08);
+            font-size: 1.2em;
+            line-height: 1.6;
+            user-select: none;
+        }
+        p {
+            margin-top: 0;
+        }
+        /* Emoji boyutunu büyüt */
+        nav a span.emoji {
+            font-size: 1.4em;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍽️ Yemek Garson Sistemi</h1>
+        <nav>
+            <a href="/garson"><span class="emoji">👤</span> Garson Tanıma</a>
+            <a href="/yemek"><span class="emoji">🍛</span> Yemek Tanıma</a>
+            <a href="/siparisler"><span class="emoji">📋</span> Siparişleri Görüntüle</a>
+            <a href="/rapor"><span class="emoji">📊</span> Performans Raporu</a>
+            <a href="/masa_reset">🧹 Masa Resetle</a>
+
+        </nav>
+    </header>
+    <main>
+        <p>Hoş geldiniz! Menüden bir işlemi seçerek devam edebilirsiniz. Sistem performansını ve kullanıcı deneyimini artırmak için bu paneli düzenli kullanın. 👌</p>
+    </main>
+</body>
+</html>
+

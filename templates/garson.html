@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>👤 Garson Tanıma - Yemek Garson Sistemi</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #007acc;
+        }
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            color: #004f80;
+        }
+        main {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.12);
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border: 2px solid #007acc;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #004f80;
+        }
+        button {
+            background-color: #007acc;
+            color: white;
+            font-size: 1.1em;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #004f80;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👤 Garson Tanıma</h1>
+        <nav>
+            <a href="/">🏠 Anasayfa</a>
+            <a href="/garson">👤 Garson Tanıma</a>
+            <a href="/yemek">🍛 Yemek Tanıma</a>
+            <a href="/siparisler">📋 Siparişler</a>
+            <a href="/rapor">📊 Performans Raporu</a>
+        </nav>
+    </header>
+    <main>
+        <form action="/garson" method="post">
+            <label for="masa_no">🍽️ Masa Numarası Girin:</label>
+            <input type="number" id="masa_no" name="masa_no" placeholder="Örn: 1" required min="1" />
+            
+            <button type="submit">📷 Garsonu Tara</button>
+        </form>
+        <div class="info">
+            <p>🕵️‍♀️ Lütfen kameranızın aktif olduğundan emin olun ve garsonun QR kodunu okutun.</p>
+            <p>⌛ Tarama 1 dakika içinde sonuçlanmazsa, uyarı alacaksınız.</p>
+        </div>
+    </main>
+</body>
+</html>

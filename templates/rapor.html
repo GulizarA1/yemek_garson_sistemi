@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Performans ve Sipariş Raporları</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9fb;
+            padding: 30px;
+            color: #222;
+            max-width: 1100px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #388e3c;
+            margin-top: 40px;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 8px;
+        }
+        .table-container {
+            overflow-x: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #a5d6a7;
+            color: #1b5e20;
+        }
+        tr:hover {
+            background-color: #e8f5e9;
+        }
+        a.back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            color: #2e7d32;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Performans ve Sipariş Raporları</h1>
+
+    <section>
+        <h2>🍽️ Sipariş Raporu</h2>
+        <div class="table-container">
+            {{ siparis_html | safe }}
+        </div>
+    </section>
+
+    <section>
+        <h2>👨‍🍳 Garson Performans Raporu</h2>
+        <div class="table-container">
+            {{ performans_html | safe }}
+        </div>
+    </section>
+
+    <a href="{{ url_for('index') }}" class="back-link">⬅️ Ana Sayfaya Dön</a>
+</body>
+</html>
